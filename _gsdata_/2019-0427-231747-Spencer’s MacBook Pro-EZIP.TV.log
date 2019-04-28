@@ -1,0 +1,25 @@
+2019-04-27 23:17:48: -- Analysis Started by User Command
+2019-04-27 23:17:48: L: State file does not exist: /Users/spencerthayer/Dropbox/www/ezIPTV/_gsdata_/_file_state_v4._gs
+2019-04-27 23:17:51: /app/views/csv.php: Conflict: New files that differ
+2019-04-27 23:17:51: /favicon.ico: Conflict: New files that differ
+2019-04-27 23:17:51: /readme.md: Conflict: New files that differ
+2019-04-27 23:17:51: Analyze has finished with Conflicts. Resolve Conflicts by selecting the correct sync direction, then click Sync
+2019-04-27 23:17:51: Changes: 9, Conflicts: 3, CopyTime: 0, FixState: 28, Errors: 0, All: 45
+2019-04-27 23:17:51: Left to Right: Copy File: 3 
+2019-04-27 23:17:51: Right to Left: Copy File: 3 
+2019-04-27 23:17:51: -- Analysis Complete. Time 00:00:04, Speed: 8 files/s
+2019-04-27 23:17:51: 
+2019-04-27 23:23:00: New _gsdata_ folder(s) created, so rescan all job folders for their ghosts
+2019-04-27 23:23:00: == Sync Started by User Command
+2019-04-27 23:23:01: Delete File 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/data/data.json' (User Action)
+2019-04-27 23:23:01: Delete File 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/data/settings.json' (User Action)
+2019-04-27 23:23:01: Delete Folder 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/data' (User Action)
+2019-04-27 23:23:02: Copy Over '/Users/spencerthayer/Dropbox/www/ezIPTV/app/views/csv.php' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/app/views/csv.php' (User Action)
+2019-04-27 23:23:03: Copy New '/Users/spencerthayer/Dropbox/www/ezIPTV/app.json' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/app.json'
+2019-04-27 23:23:04: Copy Over '/Users/spencerthayer/Dropbox/www/ezIPTV/favicon.ico' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/favicon.ico' (User Action)
+2019-04-27 23:23:05: Copy New '/Users/spencerthayer/Dropbox/www/ezIPTV/favicon.png' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/favicon.png'
+2019-04-27 23:23:06: Copy New '/Users/spencerthayer/Dropbox/www/ezIPTV/LICENSE' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/LICENSE'
+2019-04-27 23:23:08: /Users/spencerthayer/Dropbox/www/ezIPTV/readme.md: Source file has changed between Analyze and Sync from '[file] size=5815 accu-time=2019-04-27 23:09:20 attr=644' to 'size=5925 time=2019-04-27 23:22:43', noted in source file state
+2019-04-27 23:23:08: Copy Over '/Users/spencerthayer/Dropbox/www/ezIPTV/readme.md' -> 'sftp://carroll.dreamhost.com/home/spencerthayer/www/eziptv.me/readme.md' (User Action)
+2019-04-27 23:23:09: == Sync Complete. Time: 00:00:11, Speed: 8.6 KB/s, OK: 37, Errors: 0
+2019-04-27 23:23:09: 
