@@ -21,7 +21,7 @@ _THAT'S IT!_
 
 ## How to install on a server
 Even on hosted servers ezIPTV installation is extremely easy.
-- Either clone the repository `git clone https://github.com/spencerthayer/ezIPTV folderName` or [download the zip](https://github.com/spencerthayer/ezIPTV/archive/master.zip).
+- Either clone the repository `git clone https://github.com/spencerthayer/ezIPTV ezIPTV` or [download the zip](https://github.com/spencerthayer/ezIPTV/archive/master.zip).
 - Clone or extract ezIPTV into the root directory of your site.
 - Ensure ezIPTV has read/write permissions for all directories.
 - Open your new app and follow the instructions.
