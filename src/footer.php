@@ -17,7 +17,7 @@
           <p>Developing open source software is not without cost —
           it takes knowledge, time, and effort. Feel all
           warm and fuzzy inside by helping me continue the development 
-          of ezIPTV by throwing me a few donations.
+          of ezIPTV by throwing me a few dollars.
           Thank you in advance!
           </p>
 
