@@ -74,14 +74,6 @@ As of this version ezIPTV does not allow you to upload a CSV file. Until this ch
 - Click the `M3U` button to get a link to your new M3U file.
 - Now import that CSV file into your favorite Spreadsheet software.
 
-## HOW TO UPGRADE
-- Go to the Heroku [app management page](https://dashboard.heroku.com/apps/).
-- Click your ezIPTV site.
-- Click the `Deploy` tab.
-- Scroll down to "_App connected to GitHub_".
-
-- in the _Automatic deploys_ section click `Enable Automatic Deploys`.
-
 ## ToDo
 If you can help me work out these issues or donate to support my development I would appreciate it.
 - [] CSV and M3U file management (Upload / Delete).

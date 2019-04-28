@@ -21,7 +21,7 @@
         "/{a}/update" => "updateData",
         "/add" => "addController",
         "/example" => "createExample",
-        "/update" => "gitPull"
+        "/git" => "gitPull"
         );
     Link::all($routes);
     // CRUD CONTROLLERS
