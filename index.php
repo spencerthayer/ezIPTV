@@ -220,7 +220,8 @@
     function gitPull(){
         error_reporting(0);
         $gitURL = "https://github.com/spencerthayer/ezIPTV";
-        $output = shell_exec("git pull origin master");
+        $output = shell_exec("git pull ".$gitURL." master");
         echo "<pre>$output</pre>";
+        header("location: /");
     }
 ?>
