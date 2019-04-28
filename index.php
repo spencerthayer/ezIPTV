@@ -21,6 +21,7 @@
         "/{a}/update" => "updateData",
         "/add" => "addController",
         "/example" => "createExample",
+        "/update" => "gitPull"
         );
     Link::all($routes);
     // CRUD CONTROLLERS
@@ -215,5 +216,11 @@
             </table>
             </div>
             </section>";
+    }
+    function gitPull(){
+        error_reporting(0);
+        $gitURL = "https://github.com/spencerthayer/ezIPTV";
+        $output = shell_exec("git pull origin master");
+        echo "<pre>$output</pre>";
     }
 ?>
