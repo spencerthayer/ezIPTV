@@ -32,7 +32,7 @@
                 }
                 if($tag){ $tag = "(".$tag.") "; }
                 if($epgid) { $tvgid = $epgid; }else{ $tvgid = $id; }
-            if($active == "yes"){
+            if(strtolower($active) == "yes"){
                 print "#EXTINF:-1 ";
                 print "tvg-logo=\"".$logourl."\" ";
                 print "tvg-id=\"".$tvgid."\""." ";

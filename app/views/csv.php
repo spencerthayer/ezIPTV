@@ -112,7 +112,7 @@ function createCSV($data){
   header("content-disposition: attachment; filename=".date('YmdHBis').".csv");
   echo "ACTIVE,ERROR,REGION,CODE,CATEGORY,GROUP,TAG,ID,NAME,EPGID,LOGOURL,URL,EPGURL,PROVIDER,NOTES\n";
   foreach ($data as $row) {
-      echo ",";//ACTIVE
+      echo "YES,";//ACTIVE
       echo ",";//ERROR
       cleanComma($row["group-title"]);echo ","; //REGION
       useCode($row["tvg-name"]);echo ",";//CODE

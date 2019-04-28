@@ -1,4 +1,4 @@
-# ezIPTV v0.1
+# ezIPTV v0.2
 
 ezIPTV is a simple and free personal IPTV manager.
 

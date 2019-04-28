@@ -1,13 +1,13 @@
 <?php
     ini_set("memory_limit", "256M");
     error_reporting(1);
-    if (!file_exists(".htaccess")) {
-        header("location: /setup");
-        die;
-    }
     require("app/vars.php");
     require("app/link.php");
     require("app/db.php");
+    if (!file_exists(".htaccess")) {
+        header("location: ./setup");
+        die;
+    }
     // ROUTING
     $routes = array(
         "/" => "indexController",

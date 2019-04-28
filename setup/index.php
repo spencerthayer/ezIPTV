@@ -2,6 +2,7 @@
     $protocol = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] !== "off" ? "https" : "http") . "://";
     $server = $_SERVER["HTTP_HOST"];
     $hostname = $protocol.$server;
+    $uri = $_SERVER['REQUEST_URI'];
     // FUNCTIONS
     function createData() {
         $dataFolder = dirname(__DIR__, 1)."/data";
