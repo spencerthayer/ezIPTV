@@ -58,7 +58,7 @@ ezIPTV converts M3U using the following table convention names.
 - `ID`: This is the original ID of the channel from the M3U file unaltered. *This should be left alone.*
 - `NAME`: This can be used to change the names of channels.
 - `EPGID`: This is the EPG or TVG code ID for the channel. Use this to make sure you're getting accurate EPG data from your EPG XML.
-- `LOGOURL`: This is the URL to the channel logo. I created another repository for a few TV channel logos which you can find [here](https://github.com/spencerthayer/IPTV-Logos).
+- `LOGOURL`: This is the URL to the channel logo.
 - `URL`: This is the streaming URL for the channel. *This should be left alone.*
 - `PROVIDER`: This an extra field to help organize the provider of the channel. (This doesn't do anything at the moment but will in a later version.)
 - `NOTES`: This is an extra field used for notes. It's good to keep notes and stay organized.
