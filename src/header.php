@@ -52,7 +52,7 @@
       }
       input.url {
         display: inline !important;
-        width: 22rem !important;
+        width: 30rem !important;
         /* height: calc(1.5em + .75rem + 2px); */
         height: 1rem !important;
         padding: .1rem .25rem !important;
