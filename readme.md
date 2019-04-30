@@ -13,7 +13,7 @@ Oh, also it's all free. ezIPTV was created with the intention of using the free 
 
 With Heroku anyone can build their own ezIPTV for free in just a few minutes!
 - [Create a free account with Heroku](https://signup.heroku.com/php) if you haven't done so already.
-- Just click the [`Deploy to Heroku`](https://heroku.com/deploy?template=https://github.com/spencerthayer/ezIPTV) button above.
+- Just click the [`Deploy to Heroku`](https://heroku.com/deploy?template=https://github.com/spencerthayer/ezIPTV).
 - Fill out the Heroku form and click build.
 - Open your new app URL and do the simple setup.
 
