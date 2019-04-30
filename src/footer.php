@@ -1,6 +1,5 @@
-    </main>
-    </div>
-<!-- Footer -->
+</div>
+<!-- Footer fixed-bottom -->
 <footer class="page-footer font-small aqua-gradient pt-4">
 
     <!-- Footer Links -->

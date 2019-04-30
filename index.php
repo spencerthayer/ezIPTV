@@ -177,12 +177,11 @@
         return $itemURL;
     }
     function listData(){
-        echo "<section class=\"my-5\"><br/><br/>
-            <div class=\"table-responsive\">
-            <table id=\"list\" class=\"table table-sm table-hover\" cellspacing=\"0\" width=\"100%\">
+        echo "<div class=\"table-responsive\">
+            <table id=\"list\" class=\"table table-sm table-hover table-fixed\" cellspacing=\"0\" width=\"100%\">
             <thead>
                 <tr>
-                <!-- th class=\"th-sm\">UID</th -->
+                <th style=\"width:6rem;\">UID</th>
                 <th class=\"th-sm\">TITLE</th>
                 <th class=\"th-sm\">CSV URL</th>
                 <th class=\"th-sm\">M3U URLs</th>
@@ -197,26 +196,37 @@
         $itemURL = $u["protocol"].getAuth()."@".$u["server"]."/".$v["uid"];
         echo "\t\t\t".
             "<tr>".
-            "<!-- td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".$v["uid"]."</a></td -->".
+            "<td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".$v["uid"]."</a></td>".
             "<td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".$v["title"]."</a></td>".
             "<td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".$v["csvUrl"]."</a></td>".
             "<td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".line($v["m3uUrl"])."</a></td>".
             "<td onclick=\"location.href='".$v["uid"]."'\" style=\"cursor:pointer;\">".line($v["rssUrl"])."</a></td>".
             "</tr>\n";
+        // echo "\t\t\t".
+        //     "<tr><td colspan=\"5\" class=\"off\" style=\"border: none !important;\">".
+        //     "<ul class=\"nav nav-justified\">".
+        //     "<li class=\"nav-item\"><a href=\"".$itemURL."/csv\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">CSV</button></a></li>".
+        //     "<li class=\"nav-item\"><a href=\"".$itemURL."/m3u\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">M3U</button></a></li>".
+        //     "<li class=\"nav-item\"><a href=\"".$itemURL."/rss\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">RSS</button></a></li>".
+        //     "<li class=\"nav-item\"><a href=\"".$itemURL."/rss/epg\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">EPG</button></a></li>".
+        //     "<li class=\"nav-item\"><a href=\"".$itemURL."/all\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">ALL</button></a></li>".
+        //     "</ul>".
+        //     "</td></tr>\n";
+        // }
         echo "\t\t\t".
-            "<tr>".
-            "<td colspan=\"5\" style=\"background:#DEE2E6;\">".
-            // "<div class=\"col-md-10 col-lg-8 col-xl-6\">".
-            "<ul class=\"nav nav-justified\">".
-            "<li class=\"nav-item\"><a href=\"".$itemURL."/csv\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">CSV</button></a></li>".
-            "<li class=\"nav-item\"><a href=\"".$itemURL."/m3u\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">M3U</button></a></li>".
-            "<li class=\"nav-item\"><a href=\"".$itemURL."/rss\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">RSS</button></a></li>".
-            "<li class=\"nav-item\"><a href=\"".$itemURL."/rss/epg\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">EPG</button></a></li>".
-            "<li class=\"nav-item\"><a href=\"".$itemURL."/all\" target=\"_blank\"><button type=\"button\" class=\"btn btn-sm white z-depth-0 waves-effect\">ALL</button></a></li>".
-            "</ul>".
+            "<tr><td colspan=\"5\" class=\"off\" style=\"border: none !important;\">".
+            "<p><a href=\"".$itemURL."/csv\" target=\"_blank\" class=\"url\"><i class=\"fas fa-file-download\"></i> Download CSV:</a> ".
+            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/csv\"/></p>".
+            "<p><a href=\"".$itemURL."/m3u\" target=\"_blank\" class=\"url\"><i class=\"fas fa-file-medical-alt\"></i> M3U url:</a> ".
+            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/m3u\"/></p>".
+            "<p><a href=\"".$itemURL."/rss\" target=\"_blank\" class=\"url\"><i class=\"fas fa-rss\"></i> RSS M3U url:</a> ".
+            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/rss\"/></p>".
+            "<p><a href=\"".$itemURL."/rss/epg\" target=\"_blank\" class=\"url\"><i class=\"far fa-file-code\"></i> RSS EPG url:</a> ".
+            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/epg\"/></p>".
+            "<p><a href=\"".$itemURL."/all\" target=\"_blank\" class=\"url\"><i class=\"far fa-copy\"></i> M3U with RSS:</a> ".
+            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/all\"/></p>".
             "</td></tr>\n";
-            //<button type=\"button\" class=\"btn btn-outline-primary btn-sm m-0 waves-effect\">
-            }
+        }
         echo "</tbody>
             </table>
             </div>

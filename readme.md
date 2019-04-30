@@ -1,4 +1,4 @@
-# [ezIPTV v0.3](https://github.com/spencerthayer/ezIPTV)
+# [ezIPTV v0.4](https://github.com/spencerthayer/ezIPTV)
 
 ezIPTV is a simple and free personal IPTV manager.
 

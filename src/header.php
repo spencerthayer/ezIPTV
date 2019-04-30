@@ -29,18 +29,39 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
     <?/* FONT */?>
         <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet"> -->
-  <!-- <style>
-    td a {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-  </style> -->
+  <style>
+    td {
+      /* white-space: nowrap !important;  */
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      cursor: pointer !important;
+      }
+    td.off {
+      /* white-space: nowrap !important;  */
+      overflow: none !important;
+      text-overflow: none !important;
+      cursor: auto !important;
+      }
+      .md-form {
+        margin-top: 1rem !important;
+        margin-bottom: 4rem !important;
+      }
+      a.url {
+        display: inline-block;
+        width: 8rem !important;
+      }
+      input.url {
+        display: inline !important;
+        width: 22rem !important;
+        /* height: calc(1.5em + .75rem + 2px); */
+        height: 1rem !important;
+        padding: .1rem .25rem !important;
+      }
+  </style>
 </head>
 <body>
 <!--Main Navigation-->
 <header>
-
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark aqua-gradient scrolling-navbar">
     <a class="navbar-brand" href="javascript:void();"><strong><?=$name;?></strong> <small><?=$ver;?></small></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -66,10 +87,6 @@
       </ul>
     </div>
   </nav>
-
 </header>
 <!--Main Navigation-->
-
-
-<main class="my-5">
-<div class="container-fluid">
+<div style="margin: 6rem 1rem 4rem 1rem">

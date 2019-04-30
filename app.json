@@ -1,7 +1,7 @@
 {
     "name": "ezIPTV",
     "author": "Spencer Thayer",
-    "version": "0.3",
+    "version": "0.4",
     "description": "ezIPTV is a simple and free personal IPTV manager.",
     "repository": "https://github.com/spencerthayer/ezIPTV.git",
     "logo": "https://raw.githubusercontent.com/spencerthayer/ezIPTV/master/favicon.png",
