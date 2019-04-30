@@ -107,7 +107,7 @@
         "to reset authentication.".
         "</p>";
         echo "<p>".
-        "<strong><a href=\"".$url."/example\">CLICK HERE</a></strong> ".
+        "<strong><a href=\"".$url."example\">CLICK HERE</a></strong> ".
         "to create an example URL.".
         "</p>";
         $jsonSettings = json_encode(array ("login"=>$login,"pass"=>$pass));
