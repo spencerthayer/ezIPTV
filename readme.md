@@ -1,4 +1,4 @@
-# ezIPTV v0.3
+# [ezIPTV v0.3](https://github.com/spencerthayer/ezIPTV)
 
 ezIPTV is a simple and free personal IPTV manager.
 
@@ -71,7 +71,7 @@ As of this version ezIPTV does not allow you to upload a CSV file. Until this ch
 
 ### Getting your new M3U file
 
--Publish the Google Sheets CSV URL into the field for link to the CSV used to generate the M3U.
+- Publish the Google Sheets CSV URL into the field for link to the CSV used to generate the M3U.
 - Save your link.
 - Click the `M3U` button to get a link to your new M3U file.
 - Now import that CSV file into your favorite Spreadsheet software.
