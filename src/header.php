@@ -73,5 +73,3 @@
 
 <main class="my-5">
 <div class="container-fluid">
-<?=$urlUp;?><br/>
-<?=$url;?>
