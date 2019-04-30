@@ -6,7 +6,7 @@ Services like [Xtream Editor](https://xtream-editor.com) and [IPTV EPG](https://
 
 ezIPTV was created to be a DIY solution for IPTV enthusiasts. Instead of managing your M3U on a clunky website's database ezIPTV converts M3U files into CSV so that they can be manipulated easily with any spreadsheet software such as [Google Sheets](https://www.google.com/sheets/about/), [Microsoft Excel](https://products.office.com/en-us/excel), [Libre Office Calc](https://www.libreoffice.org/discover/calc), and [Apache Calc](https://www.openoffice.org/product/calc.html).
 
-Oh, also it's all free. ezIPTV was created with the intention of using the free Heroku self hosted services.
+Oh, also it's all free. ezIPTV was created with the intention of using the free Heroku self hosted services. **And if you came here from [Reddit](https://www.reddit.com/r/IPTV/comments/bi7l5j/100_free_selfhosted_iptv_management/) thanks!**
 
 ## How to install on Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/spencerthayer/ezIPTV)
