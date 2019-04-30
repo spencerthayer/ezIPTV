@@ -56,14 +56,14 @@
           <a class="nav-link" href="/add">Create New URL</a>
         </li>
       </ul>
-      <!-- <ul class="navbar-nav nav-flex-icons">
+      <ul class="navbar-nav nav-flex-icons">
         <li class="nav-item">
-          <a class="nav-link" href="/setup">Setup</a>
+          <a class="nav-link" href="/setup">Reset Pass</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="/upgrade">Upgrade</a>
-        </li>
-      </ul> -->
+        </li> -->
+      </ul>
     </div>
   </nav>
 
