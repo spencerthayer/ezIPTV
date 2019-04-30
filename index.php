@@ -10,18 +10,18 @@
     }
     // ROUTING
     $routes = array(
-        "/" => "indexController",
-        "/{a}" => "itemController",
-        "/{a}/all" => "allController",
-        "/{a}/csv" => "csvController",
-        "/{a}/delete" => "deleteData",
-        "/{a}/m3u" => "m3uController",
-        "/{a}/rss" => "rssController",
-        "/{a}/rss/epg" => "epgController",
-        "/{a}/update" => "updateData",
-        "/add" => "addController",
-        "/example" => "createExample",
-        "/git" => "gitPull"
+        $pathRoot."/" => "indexController",
+        $pathRoot."/{a}" => "itemController",
+        $pathRoot."/{a}/all" => "allController",
+        $pathRoot."/{a}/csv" => "csvController",
+        $pathRoot."/{a}/delete" => "deleteData",
+        $pathRoot."/{a}/m3u" => "m3uController",
+        $pathRoot."/{a}/rss" => "rssController",
+        $pathRoot."/{a}/rss/epg" => "epgController",
+        $pathRoot."/{a}/update" => "updateData",
+        $pathRoot."/add" => "addController",
+        $pathRoot."/example" => "createExample",
+        // "/git" => "gitPull"
         );
     Link::all($routes);
     // CRUD CONTROLLERS
@@ -47,7 +47,7 @@
     }
     // VIEWS CONTROLLERS
     function addController() {
-        header("location: /".ran(4,4)."");
+        header("location: ".url().ran(4,4)."");
     }
     function allController($a) {
         header("Content-type: text/m3u");
@@ -65,7 +65,7 @@
             "rssUrl" => array_values(array_filter(explode(PHP_EOL, $_POST["rssUrl"])))
             );
         $db->insert($data);
-        header("location: /".$_POST["uid"]);
+        header("location: ".url().$_POST["uid"]);
     }
     function readData($a){
         $db = new Db("data/data.json");
@@ -93,14 +93,14 @@
             );
         $db->where("uid", $_POST["uid"]);
         $db->update($data);
-        header("location: /".$_POST["uid"]);
+        header("location: ".url().$_POST["uid"]);
     }
     function deleteData($a){
         $u = getURI();
         $db = new Db("data/data.json");
         $db->where("uid", $u["path"]);
         $db->delete();
-        header("location: /");
+        header("location: ".url());
     }
     function createExample(){
         $db = new Db("data/data.json");
@@ -124,7 +124,7 @@
                 ),
             );
         $db->insert($data);
-        header("location: /".$uid);
+        header("location: ".url().$uid);
     }
     function csvController($a) {
         include("app/views/csv.php");
@@ -170,6 +170,11 @@
         $uriPath = explode("/", trim($parseURL, "/"));
         $path = $uriPath["0"];
         return compact("protocol","server","hostname","path");
+    }
+    function url(){
+        $u = getURI();
+        $itemURL = $u["protocol"].getAuth()."@".$u["server"]."/";//.$v["uid"]."/";
+        return $itemURL;
     }
     function listData(){
         echo "<section class=\"my-5\"><br/><br/>
@@ -217,11 +222,11 @@
             </div>
             </section>";
     }
-    function gitPull(){
-        error_reporting(0);
-        $gitURL = "https://github.com/spencerthayer/ezIPTV";
-        $output = shell_exec("git pull ".$gitURL." master");
-        echo "<pre>$output</pre>";
-        header("location: /");
-    }
+    // function gitPull(){
+    //     error_reporting(0);
+    //     $gitURL = "https://github.com/spencerthayer/ezIPTV";
+    //     $output = shell_exec("git pull ".$gitURL." master");
+    //     echo "<pre>$output</pre>";
+    //     header("location: /");
+    // }
 ?>

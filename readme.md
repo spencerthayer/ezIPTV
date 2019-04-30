@@ -20,6 +20,8 @@ With Heroku anyone can build their own ezIPTV for free in just a few minutes!
 _THAT'S IT!_
 
 ## How to install on a server
+**Note: ezIPTV cannot be run within a domain subdirectory as of right now!**
+
 Even on hosted servers ezIPTV installation is extremely easy.
 - Either clone the repository `git clone https://github.com/spencerthayer/ezIPTV ezIPTV` or [download the zip](https://github.com/spencerthayer/ezIPTV/archive/master.zip).
 - Clone or extract ezIPTV into the root directory of your site.
@@ -76,6 +78,7 @@ As of this version ezIPTV does not allow you to upload a CSV file. Until this ch
 
 ## ToDo
 If you can help me work out these issues or donate to support my development I would appreciate it.
+- [] Allow application to run within a domain subdirectory.
 - [] CSV and M3U file management (Upload / Delete).
 - [] Backup site data (Import / Export). 
 - [] One click code upgrades.

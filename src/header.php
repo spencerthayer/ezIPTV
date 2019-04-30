@@ -50,10 +50,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">List</a>
+          <a class="nav-link" href="<?=$url;?>">List</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/add">Create New URL</a>
+          <a class="nav-link" href="<?=$url;?>add">Create New URL</a>
         </li>
       </ul>
       <!-- <ul class="navbar-nav nav-flex-icons">
@@ -73,3 +73,5 @@
 
 <main class="my-5">
 <div class="container-fluid">
+<?=$urlUp;?><br/>
+<?=$url;?>
