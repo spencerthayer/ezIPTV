@@ -48,7 +48,7 @@ To see an example CSV file [download this sample](https://docs.google.com/spread
 
 ezIPTV converts M3U using the following table convention names.
 
-`ACTIVE, ERROR, REGION, CODE, CATEGORY, GROUP, TAG, ID, NAME, EPGID,LOGOURL, URL, EPGURL, PROVIDER, NOTES`
+`ACTIVE`, `ERROR`, `REGION`, `CODE`, `CATEGORY`, `GROUP`, `TAG`, `ID`, `NAME`, `EPGID`, `LOGOURL`, `URL`, `EPGURL`, `PROVIDER`, `NOTES`
 
 - `ACTIVE`: If the field is _YES_ the channel will show in the M3U. Anything other than _YES_ will not be published.
 - `ERROR`: If a channel has an error put the error code for the channel in this field. (This doesn't do anything at the moment but will in a later version.)
