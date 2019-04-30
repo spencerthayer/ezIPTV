@@ -1,4 +1,4 @@
-<?
+<?php
 class Db {
 	var $db_file = 'json.db',
 	$dataArr = array(),
