@@ -78,16 +78,15 @@ As of this version ezIPTV does not allow you to upload a CSV file. Until this ch
 
 ## ToDo
 If you can help me work out these issues or donate to support my development I would appreciate it.
-- [] Allow application to run within a domain subdirectory.
-- [] CSV and M3U file management (Upload / Delete).
-- [] Backup site data (Import / Export). 
-- [] One click code upgrades.
-- [] M3U list filtering.
-- [] EPG XML combination and compression.
-- [] YouTube URL to RSS conversion.
- - https://www.xmltvlistings.com/help/api/xmltv
- - https://commentpicker.com/youtube-channel-id.php
- - Grab Youtube XML and extract the MP4, https://youtube.com/feeds/videos.xml?channel_id=UC3M7l8ved_rYQ45AVzS0RGA
+-[] Allow application to run within a domain subdirectory.
+-[] CSV and M3U file management (Upload / Delete).
+-[] Backup site data (Import / Export). 
+-[] One click code upgrades.
+-[] M3U list filtering.
+-[] EPG XML combination and compression.
+-[] YouTube URL to RSS conversion.
+  -[] [Better XMLTV formatting.](https://www.xmltvlistings.com/help/api/xmltv)
+  -[] [Grab Youtube XML](https://commentpicker.com/youtube-channel-id.php) and extract the MP4.
  
 
 ## Dependencies
