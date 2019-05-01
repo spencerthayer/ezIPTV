@@ -42,21 +42,37 @@
       text-overflow: none !important;
       cursor: auto !important;
       }
-      .md-form {
-        margin-top: 1rem !important;
-        margin-bottom: 4rem !important;
-      }
-      a.url {
-        display: inline-block;
-        width: 8rem !important;
-      }
-      input.url {
-        display: inline !important;
-        width: 30rem !important;
-        /* height: calc(1.5em + .75rem + 2px); */
-        height: 1rem !important;
-        padding: .1rem .25rem !important;
-      }
+    .md-form {
+      margin-top: 1rem !important;
+      margin-bottom: 4rem !important;
+    }
+    li.url {
+      display: inline-block;
+      list-style: none;
+      margin-right: 2rem;
+      margin-bottom: .35rem;
+    }
+    li.url a {
+      display: inline-block;
+      width: 7rem !important;
+      color: #007bff;
+    }
+    li.url input {
+      display: inline !important;
+      width: 24rem !important;
+      /* height: calc(1.5em + .75rem + 2px); */
+      height: 1.25rem !important;
+      padding: .1rem .25rem !important;
+      border: none !important;
+      color: #999;
+    }
+    li.url input:focus {
+      border: none !important;
+    }
+    tr.off:hover {
+      background: none !important;
+    }
+
   </style>
 </head>
 <body>

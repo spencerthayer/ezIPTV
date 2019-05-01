@@ -214,17 +214,17 @@
         //     "</td></tr>\n";
         // }
         echo "\t\t\t".
-            "<tr><td colspan=\"5\" class=\"off\" style=\"border: none !important;\">".
-            "<p><a href=\"".$itemURL."/csv\" target=\"_blank\" class=\"url\"><i class=\"fas fa-file-download\"></i> Download CSV:</a> ".
-            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/csv\"/></p>".
-            "<p><a href=\"".$itemURL."/m3u\" target=\"_blank\" class=\"url\"><i class=\"fas fa-file-medical-alt\"></i> M3U url:</a> ".
-            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/m3u\"/></p>".
-            "<p><a href=\"".$itemURL."/rss\" target=\"_blank\" class=\"url\"><i class=\"fas fa-rss\"></i> RSS M3U url:</a> ".
-            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/rss\"/></p>".
-            "<p><a href=\"".$itemURL."/rss/epg\" target=\"_blank\" class=\"url\"><i class=\"far fa-file-code\"></i> RSS EPG url:</a> ".
-            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/epg\"/></p>".
-            "<p><a href=\"".$itemURL."/all\" target=\"_blank\" class=\"url\"><i class=\"far fa-copy\"></i> M3U with RSS:</a> ".
-            "<input type=\"text\" class=\"form-control url\" value=\"".$itemURL."/all\"/></p>".
+            "<tr class=\"off\"><td colspan=\"5\" class=\"off\" style=\"border: none !important;\">".
+            "<li class=\"url\"><a href=\"".$itemURL."/csv\" target=\"_blank\"><i class=\"fas fa-file-download\"></i> Download CSV:</a> ".
+            "<input type=\"text\" class=\"form-control\" value=\"".$itemURL."/csv\"/></li>".
+            "<li class=\"url\"><a href=\"".$itemURL."/m3u\" target=\"_blank\"><i class=\"fas fa-file-medical-alt\"></i> M3U url:</a> ".
+            "<input type=\"text\" class=\"form-control\" value=\"".$itemURL."/m3u\"/></li>".
+            "<li class=\"url\"><a href=\"".$itemURL."/rss\" target=\"_blank\"><i class=\"fas fa-rss\"></i> RSS M3U url:</a> ".
+            "<input type=\"text\" class=\"form-control\" value=\"".$itemURL."/rss\"/></li>".
+            "<li class=\"url\"><a href=\"".$itemURL."/rss/epg\" target=\"_blank\"><i class=\"far fa-file-code\"></i> RSS EPG url:</a> ".
+            "<input type=\"text\" class=\"form-control\" value=\"".$itemURL."/epg\"/></li>".
+            "<li class=\"url\"><a href=\"".$itemURL."/all\" target=\"_blank\"><i class=\"far fa-copy\"></i> M3U with RSS:</a> ".
+            "<input type=\"text\" class=\"form-control\" value=\"".$itemURL."/all\"/></li>".
             "</td></tr>\n";
         }
         echo "</tbody>
