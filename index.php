@@ -265,6 +265,6 @@
         $gitPathBranch = $gitBasePath.'/refs/heads/'.$gitBranchName;
         $gitHash = file_get_contents($gitPathBranch);
         $gitDate = date(DATE_ATOM, filemtime($gitPathBranch));
-        echo "<!--\n"."version date: ".$gitDate."\n"."branch: ".$gitBranchName."\n"."commit: ".$gitHash."-->";
+        echo "<!--"."\n"."version date: ".$gitDate."\n"."branch: ".$gitBranchName."\n"."commit: ".$gitHash."-->"."\n";
     }
 ?>
