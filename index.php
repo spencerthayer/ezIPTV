@@ -4,6 +4,7 @@
     require("app/vars.php");
     require("app/link.php");
     require("app/db.php");
+    getGitBranch();
     if (!file_exists(".htaccess")) {
         header("location: ./setup");
         die;
@@ -258,13 +259,12 @@
         include("src/footer.php");
     }
     function getGitBranch() {
-        $shellOutput = [];
-        exec('git branch | ' . "grep ' * '", $shellOutput);
-        foreach ($shellOutput as $line) {
-            if (strpos($line, '* ') !== false) {
-                return trim(strtolower(str_replace('* ', '', $line)));
-            }
-        }
-        return null;
-    }echo "<!-- ".getGitBranch()." -->\n";
+        $gitBasePath = '.git';
+        $gitStr = file_get_contents($gitBasePath.'/HEAD');
+        $gitBranchName = rtrim(preg_replace("/(.*?\/){2}/", '', $gitStr));
+        $gitPathBranch = $gitBasePath.'/refs/heads/'.$gitBranchName;
+        $gitHash = file_get_contents($gitPathBranch);
+        $gitDate = date(DATE_ATOM, filemtime($gitPathBranch));
+        echo "<!--\n"."version date: ".$gitDate."\n"."branch: ".$gitBranchName."\n"."commit: ".$gitHash."-->";
+    }
 ?>
