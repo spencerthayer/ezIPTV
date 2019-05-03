@@ -259,12 +259,15 @@
         include("src/footer.php");
     }
     function getGitBranch() {
-        $gitBasePath = '.git';
-        $gitStr = file_get_contents($gitBasePath.'/HEAD');
-        $gitBranchName = rtrim(preg_replace("/(.*?\/){2}/", '', $gitStr));
-        $gitPathBranch = $gitBasePath.'/refs/heads/'.$gitBranchName;
-        $gitHash = file_get_contents($gitPathBranch);
-        $gitDate = date(DATE_ATOM, filemtime($gitPathBranch));
-        echo "<!--"."\n"."version date: ".$gitDate."\n"."branch: ".$gitBranchName."\n"."commit: ".$gitHash."-->"."\n";
+        echo "<!-- ".exec("git branch -vv")." -->"."\n";
+        // $gitBasePath = '.git';
+        // $gitStr = file_get_contents($gitBasePath.'/HEAD');
+        // $gitBranchName = rtrim(preg_replace("/(.*?\/){2}/", '', $gitStr));
+        // $gitPathBranch = $gitBasePath.'/refs/heads/'.$gitBranchName;
+        // $gitHash = file_get_contents($gitPathBranch);
+        // $gitDate = date(DATE_ATOM, filemtime($gitPathBranch));
+        // "version date: ".$gitDate."\n".
+        // "branch: ".$gitBranchName."\n".
+        // "commit: ".$gitHash."\n".
     }
 ?>
