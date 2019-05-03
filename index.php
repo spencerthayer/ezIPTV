@@ -237,9 +237,11 @@
             </section>";
     }
     function gitPull(){
+        require("app/vars.php");
+        include("src/header.php");
         // if (!is_dir(".git")) { }
         $gitURL  = "https://github.com/spencerthayer/ezIPTV";
-        $outputDir = rmdir(".git");
+        $outputDir = shell_exec("rm -rf .git");
         $outputInit = shell_exec("git init");
         $outputAdd = shell_exec("git remote add origin ".$gitURL.";");
         $outputPull = shell_exec("git fetch --all;git reset --hard origin/master;");
@@ -247,6 +249,8 @@
         echo "<p><pre>$outputInit</pre></p>";
         echo "<p><pre>$outputAdd</pre></p>";
         echo "<p><pre>$outputPull</pre></p>";
+        echo "<p><a href=\"/\">RETURN TO APPLICATION</a></p>";
         // header("location: /");
+        include("src/footer.php");
     }
 ?>

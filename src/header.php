@@ -109,13 +109,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/setup">Reset Pass</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="/upgrade">Upgrade</a>
-        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/git">Update</a>
+        </li>
       </ul>
     </div>
   </nav>
 </header>
 <!--Main Navigation-->
 <div style="margin: 6rem 1rem 4rem 1rem">
-<pre>test</pre>
