@@ -240,6 +240,7 @@
         require("app/vars.php");
         include("src/header.php");
         // if (!is_dir(".git")) { }
+        echo $root;
         $gitURL  = "https://github.com/spencerthayer/ezIPTV";
         $outputDir = shell_exec("rm -rf .git");
         $outputInit = shell_exec("git init");
