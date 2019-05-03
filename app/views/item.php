@@ -20,13 +20,6 @@
                 Note: a title is not required and is used only to help organize the list.
             </small>
         </div>
-        <div class="md-form input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text md-addon" id="uid"><?=$pathURL;?></span>
-            </div>
-            <input type="text" class="form-control" id="uid" name="uid" value="<?=$u["path"]/*$v["uid"]*/;?>" required/>
-            <label for="uid">The URL is...</label>
-        </div>
         <div class="md-form">
             <input type="text" class="form-control" id="csvUrl" name="csvUrl" value="<?=$v["csvUrl"];?>"/>
             <label for="csvUrl">Link to the CSV used to generate the M3U.</label>
@@ -35,14 +28,30 @@
                 <a href="https://github.com/spencerthayer/ezIPTV">ezIPTV</a> documentation.
             </small>
         </div>
+        <?/*<div class="md-form file-field uploadForm">
+            <span for="csvFile">Upload the CSV file used to generate the M3U.</span>
+            <input type="file" class="form-control" accept=".csv,.txt" />
+            <small id="csvFile" class="form-text text-muted">
+                Note: the CSV must be formatted according to the standards in the
+                <a href="https://github.com/spencerthayer/ezIPTV">ezIPTV</a> documentation.
+            </small>
+        </div>*/?>
         <div class="md-form">
             <!-- <i class="fas fa-angle-double-right prefix"></i> -->
+            <label>M3U links to be converted into a CSV file.</label>
             <textarea class="md-textarea form-control" rows="3" name="m3uUrl" id="m3uUrl"><?=line($v["m3uUrl"]);?></textarea>
-            <label for="m3uUrl">M3U links to be converted into a CSV file.</label>
             <small id="m3uUrl" class="form-text text-muted">
                 Note: use only one M3U URL per line.
             </small>
         </div>
+        <?/*<div class="md-form file-field uploadForm">
+            <span for="csvFile">Upload the M3U files used to generate the M3U.</span>
+            <input type="file" class="form-control" accept=".m3u,.m3u8"  multiple/>
+            <!-- <small id="csvFile" class="form-text text-muted">
+                Note: 
+                <a href="https://github.com/spencerthayer/ezIPTV">ezIPTV</a> documentation.
+            </small> -->
+        </div>*/?>
         <div class="md-form">
             <!-- <i class="fas fa-angle-double-right prefix"></i> -->
             <textarea class="md-textarea form-control" rows="5" name="rssUrl" id="rssUrl"><?=line($v["rssUrl"]);?></textarea>

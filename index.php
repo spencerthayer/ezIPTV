@@ -1,6 +1,6 @@
 <?php
     ini_set("memory_limit", "256M");
-    error_reporting(1);
+    error_reporting(E_ALL);
     require("app/vars.php");
     require("app/link.php");
     require("app/db.php");
@@ -21,7 +21,11 @@
         $pathRoot."/{a}/update" => "updateData",
         $pathRoot."/add" => "addController",
         $pathRoot."/example" => "createExample",
-        // "/git" => "gitPull"
+        $pathRoot."/f/{a}/",
+        $pathRoot."/f/{a}/edit" => "fileController",
+        $pathRoot."/f/{a}/delete" => "fileController",
+        $pathRoot."/f/{a}/update" => "fileController",
+        "/git" => "gitPull"
         );
     Link::all($routes);
     // CRUD CONTROLLERS
@@ -232,11 +236,17 @@
             </div>
             </section>";
     }
-    // function gitPull(){
-    //     error_reporting(0);
-    //     $gitURL = "https://github.com/spencerthayer/ezIPTV";
-    //     $output = shell_exec("git pull ".$gitURL." master");
-    //     echo "<pre>$output</pre>";
-    //     header("location: /");
-    // }
+    function gitPull(){
+        // if (!is_dir(".git")) { }
+        $gitURL  = "https://github.com/spencerthayer/ezIPTV";
+        $outputDir = rmdir(".git");
+        $outputInit = shell_exec("git init");
+        $outputAdd = shell_exec("git remote add origin ".$gitURL.";");
+        $outputPull = shell_exec("git fetch --all;git reset --hard origin/master;");
+        echo "<p><pre>$outputDir</pre></p>";
+        echo "<p><pre>$outputInit</pre></p>";
+        echo "<p><pre>$outputAdd</pre></p>";
+        echo "<p><pre>$outputPull</pre></p>";
+        // header("location: /");
+    }
 ?>

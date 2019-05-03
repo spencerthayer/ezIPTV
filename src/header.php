@@ -26,18 +26,16 @@
         <!-- Bootstrap core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
     <?/* FONT */?>
         <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet"> -->
   <style>
     td {
-      /* white-space: nowrap !important;  */
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       cursor: pointer !important;
       }
     td.off {
-      /* white-space: nowrap !important;  */
       overflow: none !important;
       text-overflow: none !important;
       cursor: auto !important;
@@ -72,7 +70,21 @@
     tr.off:hover {
       background: none !important;
     }
-
+    .uploadForm span {
+      /* position: absolute;
+      top: .65rem;
+      left: 0;
+      -webkit-transition: .2s ease-out;
+      -o-transition: .2s ease-out;
+      transition: .2s ease-out;
+      cursor: text; */
+      color: #757575 !important;
+      font-size: 12.8px !important;
+      font-weight: 300 !important;
+    }
+    .uploadForm input {
+      border: none !important;
+    }
   </style>
 </head>
 <body>

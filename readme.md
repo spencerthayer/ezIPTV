@@ -1,4 +1,4 @@
-# [ezIPTV v0.4](https://github.com/spencerthayer/ezIPTV)
+# [ezIPTV v0.5](https://github.com/spencerthayer/ezIPTV)
 
 ezIPTV is a simple and free personal IPTV manager.
 
@@ -95,3 +95,10 @@ In a later version, this list of dependencies will automagically download to rem
 - [JSON Database](https://github.com/plamendev/json-database)
 - [Link Router](https://github.com/apsdehal/Link)
 - [PHP XML Merge](https://github.com/hareko/php-merge-xml)
+
+## Version Changes
+- **v0.1:** Release.
+- **v0.2:** General bug fixes.
+- **v0.3:** Security issues fixed without subdomain support.
+- **v0.4:** UI/UX improvements. Code cleaned up a little.
+- **v0.5:** File upload and management.

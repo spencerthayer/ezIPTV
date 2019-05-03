@@ -4,7 +4,7 @@
   $upDir = dirname(__DIR__, 1);
 
   $name = "ezIPTV";
-  $ver = "v0.4";
+  $ver = "v0.5";
 
   $url  = isset($_SERVER["HTTPS"])?"https://":"http://";
   $url .= $_SERVER["SERVER_NAME"];
