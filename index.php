@@ -55,6 +55,7 @@
     }
     function allController($a) {
         header("Content-type: text/m3u");
+        header("Content-Disposition: attachment; filename=".$a.".m3u");
         print "#EXTM3U"."\n";
         include("app/views/m3u.php");
         include("app/views/rss.php");
@@ -140,12 +141,14 @@
     }
     function m3uController($a) {
         header("Content-type: text/m3u");
+        header("Content-Disposition: attachment; filename=".$a.".m3u");
         print "#EXTM3U"."\n";
         include("app/views/m3u.php");
     }
     function rssController($a) {
         $epg = false;
         header("Content-type: text/m3u");
+        header("Content-Disposition: attachment; filename=".$a.".m3u");
         print "#EXTM3U"."\n";
         include("app/views/rss.php");
     }
@@ -246,12 +249,22 @@
         $outputInit = shell_exec("git init");
         $outputAdd = shell_exec("git remote add origin ".$gitURL.";");
         $outputPull = shell_exec("git fetch --all;git reset --hard origin/master;");
-        echo "<p><pre>$outputDir</pre></p>";
-        echo "<p><pre>$outputInit</pre></p>";
-        echo "<p><pre>$outputAdd</pre></p>";
-        echo "<p><pre>$outputPull</pre></p>";
+        echo "<p><pre>".$outputDir."</pre></p>";
+        echo "<p><pre>".$outputInit."</pre></p>";
+        echo "<p><pre>".$outputAdd."</pre></p>";
+        echo "<p><pre>".$outputPull."</pre></p>";
         echo "<p><a href=\"/\">RETURN TO APPLICATION</a></p>";
         // header("location: /");
         include("src/footer.php");
     }
+    function getGitBranch() {
+        $shellOutput = [];
+        exec('git branch | ' . "grep ' * '", $shellOutput);
+        foreach ($shellOutput as $line) {
+            if (strpos($line, '* ') !== false) {
+                return trim(strtolower(str_replace('* ', '', $line)));
+            }
+        }
+        return null;
+    }echo "<!-- ".getGitBranch()." -->\n";
 ?>
