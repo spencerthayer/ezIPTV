@@ -245,11 +245,11 @@
         include("src/header.php");
         // if (!is_dir(".git")) { }
         echo $root;
-        $gitURL  = "https://github.com/spencerthayer/ezIPTV";
-        $outputDir = shell_exec("rm -rf .git");
-        $outputInit = shell_exec("git init");
-        $outputAdd = shell_exec("git remote add origin ".$gitURL.";");
-        $outputPull = shell_exec("git fetch --all;git reset --hard origin/master;");
+        $gitURL     = "https://github.com/spencerthayer/ezIPTV";
+        $outputDir  = exec("rm -rf .git");
+        $outputInit = exec("git init");
+        $outputAdd  = exec("git remote add origin ".$gitURL.";");
+        $outputPull = exec("git fetch --all;git reset --hard origin/master;");
         echo "<p><pre>".$outputDir."</pre></p>";
         echo "<p><pre>".$outputInit."</pre></p>";
         echo "<p><pre>".$outputAdd."</pre></p>";
