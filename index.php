@@ -62,7 +62,7 @@
         include("app/views/rss.php");
     }
     function createData(){
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $data = array(
             "uid" => $_POST["uid"],
             "title" => $_POST["title"],
@@ -74,7 +74,7 @@
         header("location: ".url().$_POST["uid"]);
     }
     function readData($a){
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $db->where("uid", $a);
         // $db->order_by("_id", "DESC");
         $data = $db->get();
@@ -89,7 +89,7 @@
     }
     function updateData($a){
         // print_r($_POST);
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $data = array(
             "uid" => $_POST["uid"],
             "title" => $_POST["title"],
@@ -103,13 +103,13 @@
     }
     function deleteData($a){
         $u = getURI();
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $db->where("uid", $u["path"]);
         $db->delete();
         header("location: ".url());
     }
     function createExample(){
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $uid = ran(4,4);
         $data = array(
             "uid" => $uid,
@@ -197,7 +197,7 @@
                 </tr>
             </thead>
             <tbody>"."\n";
-        $db = new Db("data/data.json");
+        $db = new Db($_SERVER["DOCUMENT_ROOT"]."/data/data.json");
         $v = $db->get();
         $u = getURI();
         foreach($v as $v) {
